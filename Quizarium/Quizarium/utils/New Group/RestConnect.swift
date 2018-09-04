@@ -34,7 +34,7 @@ public class RestConnect {
                 let questions = try JSONDecoder().decode(QuestionModelList.self, from: data)
                 var list = [Question]()
                 let rnd = Util.shuffle(questions.questionModelList.count)
-                for i in 0..<2 {
+                for i in 0..<4 {
                     list.append(questions.questionModelList[rnd[i]])
                 }
                 self.result = list
